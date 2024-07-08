@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-ABSPATH=$(readlink -f $0)
+ABSPATH=$(readlink -f $0) # 현재 stop.sh가 속해 있는 경로를 찾습니다.
 
 ABSDIR=$(dirname $ABSPATH)
-source ${ABSDIR}/profile.sh
+source ${ABSDIR}/profile.sh # 일종의 import 구문으로 stop.sh에서도 profile.sh의 function을 사용할 수 있게 합니다.
 
 IDLE_PORT=$(find_idle_port)
 
