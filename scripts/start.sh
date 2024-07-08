@@ -27,5 +27,5 @@ nohup java -jar \
 -Dspring.config.location=$REPOSITORY/config/application.yml,\
 $REPOSITORY/config/application-prod.yml,\
 $REPOSITORY/config/application-$IDLE_PROFILE.yml \
--Dspring.profiles.active=$IDLE_PROFILE \
+-Dspring.profiles.active=$IDLE_PROFILE,prod \
 $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
