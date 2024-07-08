@@ -17,7 +17,7 @@ echo "> JAR NAME: $JAR_NAME"
 
 echo "> $JAR_NAME 에 실행 권한을 부여합니다."
 
-chmod +x $REPOSITORY/$JAR_NAME
+chmod +x $JAR_NAME
 
 IDLE_PROFILE=$(find_idle_profile)
 
@@ -28,4 +28,4 @@ nohup java -jar \
 $REPOSITORY/config/application-prod.yml,\
 $REPOSITORY/config/application-$IDLE_PROFILE.yml \
 -Dspring.profiles.active=$IDLE_PROFILE \
-$REPOSITORY/$JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
+$JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
